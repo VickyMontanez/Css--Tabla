@@ -27,9 +27,24 @@ table, th, td {
 td {
     background-color:rgb(244, 238, 229,0.5);
   }
+  
+td:hover{
+    background-color: rgba(140, 181, 199, 0.6);
+    border-style: dotted solid;
+  }
 
 th {
     background-color:rgba(40, 129, 134, 0.6);
+    animation-name: exa;
+    animation-duration: 6s;
+}
+th:hover{
+    font-size: 70px;
+}
+
+@keyframes exa {
+    from {background-color: rgba(40, 129, 134, 0.6);}
+    to {background-color: rgb(255, 152, 169, 0.6);}
 }
 
 h1{
@@ -38,11 +53,16 @@ h1{
     text-align: center;
 }
 
+h1:hover {
+    font-size: 100px;
+}
+
 caption{
     font-family: "Midspicy";
     font-size: 60px;
     text-align: center;
 }
+
 
 .pr{
     text-align: left;
@@ -56,6 +76,18 @@ main{
 main img{
     position: absolute;
     right: 0;
+    top: 0;
+    width: 7%;
+    animation: slide 6s;
+    animation-direction: alternate;
+}
+
+@keyframes slide{
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 30px);}
 }
 
 main img:hover {
